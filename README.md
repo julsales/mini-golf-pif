@@ -1,2 +1,2 @@
-# mini-golf-pif
+# Mini-Golf-Pif
 Repositório do projeto de PIF
