@@ -1,0 +1,7 @@
+# ninja log v5
+5	212	1716341207884754000	build.ninja	22ab1d5f2df0ea46
+49	329	1716341170555915500	CMakeFiles/MiniGolfe.dir/cli-lib-main/src/screen.c.o	a49baf37edd3e79e
+6	327	1716341170555915500	CMakeFiles/MiniGolfe.dir/main.c.o	ef0e9e612e07a818
+457	935	1716341171166151500	MiniGolfe.exe	c8c80895d88a5e11
+30	328	1716341170554706100	CMakeFiles/MiniGolfe.dir/cli-lib-main/src/keyboard.c.o	4f10e37a6c3e06b5
+75	456	1716341170689869900	CMakeFiles/MiniGolfe.dir/cli-lib-main/src/timer.c.o	fde16aae9086bc59
