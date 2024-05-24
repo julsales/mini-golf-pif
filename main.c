@@ -1,3 +1,5 @@
+//mini golf
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -30,6 +32,11 @@ int main(void) {
     screenGotoxy(26, 23);
     printf("                               ");
     ch=getchar();
+    screenClear();
+    screenInit(20);
+    printbola(x,y);
+    printburaco(5, 10, 1);
+    ch=getchar();
 }
 
 void printbola(int nextX, int nextY) {
@@ -39,9 +46,17 @@ void printbola(int nextX, int nextY) {
     x = nextX;
     y = nextY;
     screenGotoxy(x, y);
-    printf("◌");
+    printf("⬤");
 }
 
-void printburaco(int x, int y, int raio){
-
-}
+void printburaco(int x, int y, int raio) {
+    screenSetColor(BROWN, DARKGRAY);
+    for (int i = y - raio; i <= y + raio; i++) {
+        for (int j = x - raio; j <= x + raio; j++) {
+            if ((x - j) * (x - j) + (y - i) * (y - i) <= raio * raio) {
+                screenGotoxy(j, i);
+                printf("__");
+            }
+        }
+    }
+    screenSetColor(WHITE, DARKGRAY);
