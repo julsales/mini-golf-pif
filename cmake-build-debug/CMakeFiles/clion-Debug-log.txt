@@ -1,4 +1,20 @@
-C:\Users\julia\AppData\Local\JetBrains\CLion2024.1\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/cygdrive/c/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/cygwin/x64/ninja.exe" -G Ninja -S /cygdrive/c/Users/julia/CLionProjects/MiniGolfe -B /cygdrive/c/Users/julia/CLionProjects/MiniGolfe/cmake-build-debug
--- Configuring done (0.0s)
--- Generating done (0.0s)
--- Build files have been written to: /cygdrive/c/Users/julia/CLionProjects/MiniGolfe/cmake-build-debug
+C:\Users\chris\AppData\Local\JetBrains\CLion2024.1\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /cygdrive/c/Users/chris/OneDrive/Documentos/GitHub/mini-golf-pif -B /cygdrive/c/Users/chris/OneDrive/Documentos/GitHub/mini-golf-pif/cmake-build-debug
+CMake Deprecation Warning:
+  Support for "Extra Generators" like
+
+    CodeBlocks
+
+  is deprecated and will be removed from a future version of CMake.  IDEs may
+  use the cmake-file-api(7) to view CMake-generated project build trees.
+
+
+CMake Error at CMakeLists.txt:13:
+  Parse error.  Expected a command name, got unquoted argument with text "'".
+
+
+-- Configuring incomplete, errors occurred!
+
+Cannot get compiler information:
+	Compiler exited with error code 1: C:\Program Files\JetBrains\CLion 2024.1.1\bin\mingw\bin\gcc.exe -xc -g -std=gnu99 -fpch-preprocess -v -dD -E
+	
+	

@@ -9,3 +9,5 @@ add_executable(MiniGolfe main.c
         cli-lib-main/src/keyboard.c
         cli-lib-main/src/screen.c
         cli-lib-main/src/timer.c)
+
+'
