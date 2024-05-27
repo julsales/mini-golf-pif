@@ -85,10 +85,10 @@ Para executar o Pong2, siga estas etapas:
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/Thomazrlima">
-        <img src="https://avatars3.githubusercontent.com/Thomazrlima" width="100px;" alt="Foto de João"/><br>
+      <a href="https://github.com/julsales">
+        <img src="https://avatars.githubusercontent.com/julsales" width="100px;" alt="Foto de Julia"/><br>
         <sub>
-          <b>João Pedro Maranhão</b>
+          <b>Julia Sales</b>
         </sub>
       </a>
     </td>
@@ -101,10 +101,10 @@ Para executar o Pong2, siga estas etapas:
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/julsales">
-        <img src="https://avatars.githubusercontent.com/julsales" width="100px;" alt="Foto de Julia"/><br>
+       <a href="https://github.com/Thomazrlima">
+        <img src="https://avatars3.githubusercontent.com/Thomazrlima" width="100px;" alt="Foto de João"/><br>
         <sub>
-          <b>Julia Sales</b>
+          <b>João Pedro Maranhão</b>
         </sub>
       </a>
     </td>
