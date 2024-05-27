@@ -93,8 +93,8 @@ Para executar o Pong2, siga estas etapas:
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/hsspedro">
-        <img src="https://avatars.githubusercontent.com/hsspedro" width="100px;" alt="Foto de Chris"/><br>
+      <a href="https://github.com/chrisdrakon">
+        <img src="https://avatars.githubusercontent.com/chrisdrakon" width="100px;" alt="Foto de Chris"/><br>
         <sub>
           <b>Chistian barnard</b>
         </sub>
