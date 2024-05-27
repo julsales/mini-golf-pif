@@ -6,6 +6,12 @@
 #include "timer.h"
 
 int x = 34, y = 12;
+int incX = 1, incY = 1;
+
+struct player{
+    char nome[21];
+    int score;
+};
 
 struct buraco {
     int x;
@@ -16,7 +22,7 @@ struct buraco {
 void menuinit();
 void printbola(int nextX, int nextY);
 void printburaco(struct buraco *bur, int x, int y, int raio);
-void moverbola();
+void apagarburaco(struct buraco *bur);
 void moveBall(char direction);
 
 int main(void) {
@@ -65,6 +71,31 @@ int main(void) {
     return 0;
 }
 
+void menuinit() {
+    int x1 = 10;
+    int y1 = 8;
+    screenGotoxy(x1, y1);
+    screenSetColor(WHITE, DARKGRAY);
+    printf("███╗░░░███╗██╗███╗░░██╗██╗  ░██████╗░░█████╗░██╗░░░░░███████╗");
+    screenGotoxy(x1, y1+1);
+    printf("████╗░████║██║████╗░██║██║  ██╔════╝░██╔══██╗██║░░░░░██╔════╝");
+    screenGotoxy(x1, y1+2);
+    printf("██╔████╔██║██║██╔██╗██║██║  ██║░░██╗░██║░░██║██║░░░░░█████╗░░");
+    screenGotoxy(x1, y1+3);
+    printf("██║╚██╔╝██║██║██║╚████║██║  ██║░░╚██╗██║░░██║██║░░░░░██╔══╝░░");
+    screenGotoxy(x1, y1+4);
+    printf("██║░╚═╝░██║██║██║░╚███║██║  ╚██████╔╝╚█████╔╝███████╗██║░░░░░");
+    screenGotoxy(x1, y1+5);
+    printf("╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚═╝  ░╚═════╝░░╚════╝░╚══════╝╚═╝░░░░░");
+    screenSetColor(YELLOW, DARKGRAY);
+    screenGotoxy(25, 22);
+    screenSetBlink();
+    printf("[SELECT ANY KEY TO CONTINUE]");
+    screenGotoxy(26, 23);
+    printf("                               ");
+    screenSetNormal();
+}
+
 void printbola(int nextX, int nextY) {
     screenSetColor(WHITE, DARKGRAY);
     screenGotoxy(x, y);
@@ -94,26 +125,45 @@ void printburaco(struct buraco *bur, int x, int y, int raio) {
     screenSetColor(WHITE, DARKGRAY);
 }
 
-void menuinit() {
+void apagarburaco(struct buraco *bur) {
+    int x = bur->x;
+    int y = bur->y;
+    int raio = bur->raio;
+    int i, j;
+    for (i = y - raio; i <= y + raio; i++) {
+        for (j = x - raio; j <= x + raio; j++) {
+            if ((x - j) * (x - j) + (y - i) * (y - i) <= raio * raio) {
+                screenGotoxy(j, i);
+                printf(" ");
+            }
+        }
+    }
     screenGotoxy(x, y);
-    screenSetColor(RED, DARKGRAY);
-    printf("MINI GOLF");
-    screenSetColor(YELLOW, DARKGRAY);
-    screenGotoxy(25, 22);
-    screenSetBlink();
-    printf("[SELECT ANY KEY TO CONTINUE]");
-    screenGotoxy(26, 23);
-    printf("                               ");
-    screenSetNormal();
+    printf(" ");
+    screenSetColor(WHITE, DARKGRAY);  // Restore the default text color
 }
 
-void moveBall(char direction) {
-    int nextX = x, nextY = y;
-    switch (direction) {
-        case 'w': nextY = y - 1; break;
-        case 'a': nextX = x - 1; break;
-        case 's': nextY = y + 1; break;
-        case 'd': nextX = x + 1; break;
+void moveBall(char direcao) {
+    int nextX = x;
+    int nextY = y;
+    switch (direcao) {
+        case 'w':
+            nextY = y - incY;
+
+            break;
+        case 'a':
+            nextX = x - incX;
+
+            break;
+        case 's':
+
+            nextY = y + incY;
+            break;
+        case 'd':
+
+            nextX = x + incX;
+            break;
     }
     printbola(nextX, nextY);
+    screenUpdate();
 }
