@@ -86,25 +86,25 @@ Para executar o Pong2, siga estas etapas:
   <tr>
     <td align="center">
       <a href="https://github.com/Thomazrlima">
-        <img src="https://avatars3.githubusercontent.com/Thomazrlima" width="100px;" alt="Foto de Thomaz"/><br>
+        <img src="https://avatars3.githubusercontent.com/Thomazrlima" width="100px;" alt="Foto de João"/><br>
         <sub>
-          <b>Thomaz R. Lima</b>
+          <b>João Pedro Maranhão</b>
         </sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/hsspedro">
-        <img src="https://avatars.githubusercontent.com/hsspedro" width="100px;" alt="Foto de Pedro"/><br>
+        <img src="https://avatars.githubusercontent.com/hsspedro" width="100px;" alt="Foto de Chris"/><br>
         <sub>
-          <b>Pedro S. Souza</b>
+          <b>Chistian barnard</b>
         </sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/julsales">
-        <img src="https://avatars.githubusercontent.com/julsales" width="100px;" alt="Foto de Sofia"/><br>
+        <img src="https://avatars.githubusercontent.com/julsales" width="100px;" alt="Foto de Julia"/><br>
         <sub>
-          <b>Sofia Saraiva</b>
+          <b>Julia Sales</b>
         </sub>
       </a>
     </td>
