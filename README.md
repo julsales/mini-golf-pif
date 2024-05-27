@@ -101,8 +101,8 @@ Para executar o Pong2, siga estas etapas:
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/Sofia-Saraiva">
-        <img src="https://avatars.githubusercontent.com/Sofia-Saraiva" width="100px;" alt="Foto de Sofia"/><br>
+      <a href="https://github.com/julsales">
+        <img src="https://avatars.githubusercontent.com/julsales" width="100px;" alt="Foto de Sofia"/><br>
         <sub>
           <b>Sofia Saraiva</b>
         </sub>
