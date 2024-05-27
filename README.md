@@ -1,4 +1,3 @@
-# Mini Golf Pif
 <p align="center">
   <img
     src="https://img.shields.io/badge/Status-Em%20desenvolvimento-green?style=flat-square"
@@ -8,7 +7,7 @@
 
 <p align="center">
   <img
-    src="https://img.shields.io/github/repo-size/Sofia-Saraiva/Semester3-CESAR-School?style=flat"
+    src="https://img.shields.io/github/repo-size/julsales/mini-golf-pif/?style=flat"
     alt="Repository Size"
   />
   <img
@@ -26,7 +25,7 @@
   /></a>
 </p>
 
-## 🖥️ XYZ
+## 🖥️ MINI GOLF
 
 ## 📄 Descrição
 
