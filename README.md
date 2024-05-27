@@ -25,7 +25,7 @@
   /></a>
 </p>
 
-## 🖥️ MINI GOLF
+## ⛳ Mini Golf
 
 ## 📄 Descrição
 
@@ -69,16 +69,16 @@ Para executar o Pong2, siga estas etapas:
 
 <ul>
   <li>
-    <a href="https://github.com/Thomazrlima">Thomaz Lima</a> -
-    trl@cesar.school 📩
+    <a href="https://github.com/julsales">Júlia Sales</a> -
+    jsn@cesar.school 📩
   </li>
   <li>
-    <a href="https://github.com/hsspedro">Pedro Henrique Silva</a> -
-    phss@cesar.school 📩
+    <a href="https://github.com/hsspedro">Christian Barnard</a> -
+    cbpj@cesar.school 📩
   </li>
   <li>
-    <a href="https://github.com/Sofia-Saraiva">Sofia Saraiva</a> -
-    spscl@cesar.school 📩
+    <a href="https://github.com/Sofia-Saraiva">João Pedro Maranhão</a> -
+    jpmcf@cesar.school 📩
   </li>
 </ul>
 
