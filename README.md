@@ -34,19 +34,17 @@ Para jogar de forma justa, temos uma força de lançamento que varia de 1 a 5, r
 
 Para executar o Mini Golf, siga estas etapas:
 
-1. Clone este repositório em sua máquina:
+1. Clone este repositório em sua máquina: `https://github.com/julsales/mini-golf-pif.git`
 
-3. Compile o programa:
+2. Compile o programa: `gcc .\main.c .\cli-lib-main\src\*.c -I.\cli-lib-main\include\ -o minigolfe`
 
-4. Rode o programa:
-
-5. Divirta-se jogando Pong2 com seus amigos!
+3. Rode o programa: `gcc .\main.c`
 
 ## 👩‍💻 Membros
 
 <ul>
   <li>
-    <a href="https://github.com/julsales">Júlia Sales</a> -
+    <a href="https://github.com/julsales">Júlia Sales</a> - 
     jsn@cesar.school 📩
   </li>
   <li>
