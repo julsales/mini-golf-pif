@@ -24,7 +24,7 @@ Ou seja:
 <br>
 8 a 9 tacadas = 2
 <br>
-10 tacadas ou mais = 1
+10+ tacadas = 1
 <br>
 
 ### ⚡️ Força de lançamento:
