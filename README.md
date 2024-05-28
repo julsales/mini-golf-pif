@@ -3,11 +3,11 @@
 
 ## 📄 Descrição
 
-Mini Golf é o jogo copiando o esporte da vida real, onde jogadores competem de forma mais pacífica para acertarem o buraco apenas movendo a bola.
+Mini Golf é um jogo baseado no esporte da vida real, ondo jogadores competem entre su para acertarem o buraco apenas movendo a bola e desviando dos possíveis obstáculos, isso com o menor número de movimentos possíveis.
 
 ## 🎲 Objetivo do Jogo
 
-O objetivo do jogo é fazer com que dois jogadores joguem entre si, e quem conseguir chegar ao objetivo final com menos jogadas ganhará mais pontos, ocorrendo assim uma vitória.
+O objetivo do jogo é fazer com que dois jogadores joguem entre si e acertem o buraco com a menor quantidade de movimentos possível.Quem conseguir chegar ao objetivo final com menos jogadas ganhará mais pontos, ocorrendo assim uma vitória.
 
 ### 👾 Pontuação:
 
