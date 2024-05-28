@@ -8,4 +8,5 @@ include_directories(cli-lib-main/include)
 add_executable(MiniGolfe main.c
         cli-lib-main/src/keyboard.c
         cli-lib-main/src/screen.c
-        cli-lib-main/src/timer.c)
+        cli-lib-main/src/timer.c
+)
