@@ -3,26 +3,32 @@
 
 ## 📄 Descrição
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+Mini Golf é o jogo copiando o esporte da vida real, onde jogadores competem de forma mais pacífica para acertarem o buraco apenas movendo a bola.
 
 ## 🎲 Objetivo do Jogo
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+O objetivo do jogo é fazer com que dois jogadores joguem entre si, e quem conseguir chegar ao objetivo final com menos jogadas ganhará mais pontos, ocorrendo assim uma vitória.
 
-### ⚾ Múltiplas Bolas:
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+### 👾 Pontuação:
 
-### 👾 Pontuação Duplicada:
-Lorem Ipsum has been the industry's standard
+A pontuação sempre terá uma nota máxima de 10, que diminui progressivamente com a quantidade de tacadas.
+Ou seja:
+1 tacada = 10
+2 tacadas = 8
+3 tacadas = 6
+4 tacadas = 3
+5 tacadas = 2
+6 tacadas = 1
 
-### ⚡️ Alta Velocidade:
-Lorem Ipsum has been the industry's standard
+### ⚡️ Força de lançamento:
+
+Para jogar de forma justa, temos uma força de lançamento que varia de 1 a 5, representando não apenas números, mas também um crescimento multiplicativo da força das jogadas.
 
 ## 🕹️ Como Jogar
 
-- Use as teclas de seta ou as teclas "w" e "s" para controlar a raquete no lado esquerdo da tela e "i" e "k" para controlar a raquete no lado direito da tela.
+- Use as teclas de seta ou as teclas "W, A, S, D" para se mover nas quatro direções: CIMA, BAIXO, ESQUERDA, DIREITA.
 - Certifique-se de manter o caps lock desativado.
-- Mantenha suas raquetes em movimento para acertar as bolas e marcar pontos.
+- Caso a bola acerte a parede, ela será ricocheteada e voltará a quantidade de casas de acordo com a força jogada (-1 do impacto).
 
 ## ♟️ Executando o Jogo
 
