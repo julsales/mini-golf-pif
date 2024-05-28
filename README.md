@@ -32,16 +32,13 @@ Para jogar de forma justa, temos uma força de lançamento que varia de 1 a 5, r
 
 ## ♟️ Executando o Jogo
 
-Para executar o Pong2, siga estas etapas:
+Para executar o Mini Golf, siga estas etapas:
 
 1. Clone este repositório em sua máquina:
-   `Lorem Ipsum has been the industry's standard`
 
 3. Compile o programa:
-   `Lorem Ipsum has been the industry's standard`
 
 4. Rode o programa:
-   `Lorem Ipsum has been the industry's standardn`
 
 5. Divirta-se jogando Pong2 com seus amigos!
 
@@ -76,7 +73,7 @@ Para executar o Pong2, siga estas etapas:
       <a href="https://github.com/chrisdrakon">
         <img src="https://avatars.githubusercontent.com/chrisdrakon" width="100px;" alt="Foto de Chris"/><br>
         <sub>
-          <b>Chistian Barnard</b>
+          <b>Christian Barnard</b>
         </sub>
       </a>
     </td>
@@ -91,6 +88,3 @@ Para executar o Pong2, siga estas etapas:
   </tr>
 </table>
 
-## Licença
-
-Lorem Ipsum has been the industry's standard
