@@ -13,12 +13,19 @@ O objetivo do jogo é fazer com que dois jogadores joguem entre si, e quem conse
 
 A pontuação sempre terá uma nota máxima de 10, que diminui progressivamente com a quantidade de tacadas.
 Ou seja:
-1 tacada = 10
-2 tacadas = 8
-3 tacadas = 6
-4 tacadas = 3
-5 tacadas = 2
-6 tacadas = 1
+<br>
+1 a 2 tacadas = 10
+<br>
+3 a 4 tacadas = 8
+<br>
+4 a 5 tacadas = 6
+<br>
+6 a 7 tacadas = 3
+<br>
+8 a 9 tacadas = 2
+<br>
+10 tacadas ou mais = 1
+<br>
 
 ### ⚡️ Força de lançamento:
 
