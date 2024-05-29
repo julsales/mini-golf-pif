@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
 #include "keyboard.h"
 #include "screen.h"
-#include "timer.h"
 
 #define LARGURA 80
 #define ALTURA 24
@@ -87,12 +85,14 @@ int main(void) {
                             apagarburaco(&bur[0]);
                             screenGotoxy(x, y);
                             printbola(x, y);
+                            ptp->score += calcularPontuacao(ptp->movimentos);
                         }
                         if (!buraco2_acertado && colisao(&bur[1], x, y)) {
                             buraco2_acertado = 1;
                             apagarburaco(&bur[1]);
                             screenGotoxy(x, y);
                             printbola(x, y);
+                            ptp->score += calcularPontuacao(ptp->movimentos);
                         }
 
                         if (buraco1_acertado && buraco2_acertado) {
@@ -123,12 +123,14 @@ int main(void) {
                             apagarburaco(&bur[0]);
                             screenGotoxy(x, y);
                             printbola(x, y);
+                            ptp->score += calcularPontuacao(ptp->movimentos);
                         }
                         if (!buraco2_acertado && colisao(&bur[1], x, y)) {
                             buraco2_acertado = 1;
                             apagarburaco(&bur[1]);
                             screenGotoxy(x, y);
                             printbola(x, y);
+                            ptp->score += calcularPontuacao(ptp->movimentos);
                         }
 
                         if (buraco1_acertado && buraco2_acertado) {
@@ -162,24 +164,28 @@ int main(void) {
                             apagarburaco(&bur[0]);
                             screenGotoxy(x, y);
                             printbola(x, y);
+                            ptp->score += calcularPontuacao(ptp->movimentos);
                         }
                         if (!buraco2_acertado && colisao(&bur[1], x, y)) {
                             buraco2_acertado = 1;
                             apagarburaco(&bur[1]);
                             screenGotoxy(x, y);
                             printbola(x, y);
+                            ptp->score += calcularPontuacao(ptp->movimentos);
                         }
                         if (!buraco3_acertado && colisao(&bur[2], x, y)) {
                             buraco3_acertado = 1;
                             apagarburaco(&bur[2]);
                             screenGotoxy(x, y);
                             printbola(x, y);
+                            ptp->score += calcularPontuacao(ptp->movimentos);
                         }
                         if (!buraco4_acertado && colisao(&bur[3], x, y)) {
                             buraco4_acertado = 1;
                             apagarburaco(&bur[3]);
                             screenGotoxy(x, y);
                             printbola(x, y);
+                            ptp->score += calcularPontuacao(ptp->movimentos);
                         }
 
                         if (buraco1_acertado && buraco2_acertado && buraco3_acertado && buraco4_acertado) {
@@ -215,24 +221,28 @@ int main(void) {
                             apagarburaco(&bur[0]);
                             screenGotoxy(x, y);
                             printbola(x, y);
+                            ptp->score += calcularPontuacao(ptp->movimentos);
                         }
                         if (!buraco2_acertado && colisao(&bur[1], x, y)) {
                             buraco2_acertado = 1;
                             apagarburaco(&bur[1]);
                             screenGotoxy(x, y);
                             printbola(x, y);
+                            ptp->score += calcularPontuacao(ptp->movimentos);
                         }
                         if (!buraco3_acertado && colisao(&bur[2], x, y)) {
                             buraco3_acertado = 1;
                             apagarburaco(&bur[2]);
                             screenGotoxy(x, y);
                             printbola(x, y);
+                            ptp->score += calcularPontuacao(ptp->movimentos);
                         }
                         if (!buraco4_acertado && colisao(&bur[3], x, y)) {
                             buraco4_acertado = 1;
                             apagarburaco(&bur[3]);
                             screenGotoxy(x, y);
                             printbola(x, y);
+                            ptp->score += calcularPontuacao(ptp->movimentos);
                         }
 
                         if (buraco1_acertado && buraco2_acertado && buraco3_acertado && buraco4_acertado) {
@@ -412,7 +422,6 @@ void moverbola(struct player *ptp, char direcao) {
     if (mov > 5) {
         mov = 5;
     }
-    ptp->score += calcularPontuacao(ptp->movimentos);
     int score = ptp->score;
     screenGotoxy(65, 2);
     printf("Pontuação: %d", score);
