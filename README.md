@@ -19,13 +19,13 @@ Ou seja:
 <br>
 3 a 4 tacadas = 8
 <br>
-4 a 5 tacadas = 6
+5 a 6 tacadas = 6
 <br>
-6 a 7 tacadas = 3
+7 a 8 tacadas = 3
 <br>
-8 a 9 tacadas = 2
+9 a 10 tacadas = 2
 <br>
-10+ tacadas = 1
+11+ tacadas = 1
 <br>
 
 ### ⚡️ Força de lançamento:
