@@ -12,11 +12,10 @@
 
 int x = 34, y = 12;
 
-struct node {
+struct player {
     char nome[21];
     int movimentos;
     int score;
-    struct node *next;
 };
 
 struct buraco {
@@ -31,19 +30,19 @@ void desenharParedes();
 void printbola(int nextX, int nextY);
 void printburaco(struct buraco *bur, int x, int y, int raio);
 void apagarburaco(struct buraco *bur);
-void moverbola(struct node *ptp ,char direcao);
+void moverbola(struct player *ptp ,char direcao);
 void animacaobola(int initX, int initY, int endX, int endY, int *forcarebote);
 int calcularForca(int mov);
 int colisao(struct buraco *bur, int Ox, int Oy);
 int calcularPontuacao(int movimentos);
+void escrevernome(struct player *ptp);
+void salvarPontuacao(struct player *ptp);
 
 int main(void) {
     int ch = 0;
     screenInit(20);
     keyboardInit();
     menuinit();
-
-    struct node *head = NULL;
 
     if (keyhit()) {
         ch = getchar();
@@ -58,8 +57,7 @@ int main(void) {
         printf("Modo PROFISSIONAL - 2");
 
         struct buraco *bur = (struct buraco *)malloc(8 * sizeof(struct buraco));
-        struct node *ptp = (struct node *)malloc(2 * sizeof(struct node));
-
+        struct player *ptp = (struct player *)malloc(2 * sizeof(struct player));
         ch = getchar();
         screenClear();
         int buraco1_acertado = 0;
@@ -68,9 +66,12 @@ int main(void) {
         int buraco4_acertado = 0;
 
         switch (ch) {
-            case '1':screenInit(1);
+            case '1':
+                screenInit(1);
                 instrucoes();
                 ch=getchar();
+                escrevernome(&ptp[0]);
+                escrevernome(&ptp[1]);
                 screenInit(1);
                 desenharParedes();
                 printbola(x, y);
@@ -102,7 +103,7 @@ int main(void) {
                     }
                 }
                 screenGotoxy(0, MAXY + 3);
-                printf("vez do player 2");
+                printf("Vez do player 2");
                 ch = getchar();
                 screenInit(1);
                 x = 34;
@@ -132,7 +133,7 @@ int main(void) {
 
                         if (buraco1_acertado && buraco2_acertado) {
                             screenGotoxy(0, ALTURA + 3);
-                            printf("Você acertou todos os buracos! Jogo encerrado\n");
+                            printf("Você acertou todos os buracos! Jogo encerrado");
                             break;
                         }
                     }
@@ -141,7 +142,9 @@ int main(void) {
             case '2':
                 screenInit(1);
                 instrucoes();
-                ch = getchar();
+                ch=getchar();
+                escrevernome(&ptp[0]);
+                escrevernome(&ptp[1]);
                 screenInit(1);
                 desenharParedes();
                 printbola(x, y);
@@ -181,14 +184,14 @@ int main(void) {
 
                         if (buraco1_acertado && buraco2_acertado && buraco3_acertado && buraco4_acertado) {
                             screenGotoxy(0, ALTURA + 3);
-                            printf("Você acertou todos os buracos! Jogo encerrado\n");
+                            printf("Você acertou todos os buracos! Jogo encerrado");
                             break;
                         }
                     }
                 }
 
                 screenGotoxy(0, ALTURA + 4);
-                printf("vez do player 2\n");
+                printf("Vez do player 2");
                 ch = getchar();
                 screenInit(1);
                 x = 34;
@@ -234,7 +237,7 @@ int main(void) {
 
                         if (buraco1_acertado && buraco2_acertado && buraco3_acertado && buraco4_acertado) {
                             screenGotoxy(0, ALTURA + 3);
-                            printf("Você acertou todos os buracos! Jogo encerrado\n");
+                            printf("Você acertou todos os buracos! Jogo encerrado");
                             break;
                         }
                     }
@@ -242,13 +245,16 @@ int main(void) {
                 break;
             default:
                 screenGotoxy(x - 4, y + 3);
-                printf("Digite uma opção válida");
+                printf("Reinicie o Jogo");
                 ch = getchar();
         }
+        salvarPontuacao(ptp);
         free(ptp);
         free(bur);
     }
 
+    keyboardDestroy();
+    screenDestroy();
     return 0;
 }
 
@@ -382,11 +388,11 @@ int calcularForca(int mov) {
         case 5:
             return 9;
         default:
-            return 1; // Valor padrão se algo inesperado acontecer
+            return 1;
     }
 }
 
-void moverbola(struct node *ptp, char direcao) {
+void moverbola(struct player *ptp, char direcao) {
     screenGotoxy(2, 2);
     printf("Força:");
     screenGotoxy(2, 3);
@@ -406,9 +412,9 @@ void moverbola(struct node *ptp, char direcao) {
     if (mov > 5) {
         mov = 5;
     }
-    ptp->score = calcularPontuacao(ptp->movimentos);
+    ptp->score += calcularPontuacao(ptp->movimentos);
     int score = ptp->score;
-    screenGotoxy(2, 10);
+    screenGotoxy(65, 2);
     printf("Pontuação: %d", score);
     int forca = calcularForca(mov);
     screenGotoxy(2, 2);
@@ -518,4 +524,53 @@ int calcularPontuacao(int movimentos) {
     } else {
         return 1;
     }
+}
+
+void salvarPontuacao(struct player *ptp) {
+    FILE *arquivo = fopen("pontuacao.txt", "a");
+    if (arquivo != NULL) {
+        for (int i = 0; i < 2; i++) {
+            fprintf(arquivo, "Jogador %s: Pontuação = %d\n", ptp[i].nome, ptp[i].score);
+        }
+        fclose(arquivo);
+    } else {
+        printf("Erro ao abrir o arquivo de pontuação.\n");
+    }
+}
+
+
+void escrevernome(struct player *ptp) {
+    screenClear();
+    screenInit(1);
+    screenSetColor(WHITE, DARKGRAY);
+    screenGotoxy(MAXX / 2 - 10, MAXY / 2 - 6);
+    printf("Digite seu nome: ");
+
+    char ch;
+    int i = 0;
+
+    while ((ch = getchar()) != '\n' && ch != EOF);
+    while (i < 20) {
+        ch = getchar();
+        if (ch == '\n') {
+            break;
+        } else if (ch == 127) {
+            if (i > 0) {
+                i--;
+                screenSetColor(WHITE, DARKGRAY);
+                screenGotoxy(MAXX / 2 - 10 + i, MAXY / 2 - 5);
+                printf(" ");
+                screenGotoxy(MAXX / 2 - 10 + i, MAXY / 2 - 5);
+                screenUpdate();
+            }
+        } else {
+            ptp->nome[i] = ch;
+            screenSetColor(WHITE, DARKGRAY);
+            screenGotoxy(MAXX / 2 - 10 + i, MAXY / 2 - 5);
+            printf("%c", ch);
+            i++;
+        }
+    }
+    ptp->nome[i] = '\0';
+    screenUpdate();
 }
