@@ -36,7 +36,7 @@ Para jogar de forma justa, temos uma força de lançamento que varia de 1 a 5, r
 
 - Use as teclas de seta ou as teclas "W - A - S - D" para se mover nas quatro direções: CIMA, BAIXO, ESQUERDA, DIREITA. E ainda temos um adicional de "Q - E - Z - C" para se mover nas diagonais: "CIMA ESQUERDA, CIMA DIREITA, BAIXO ESQUERDA, BAIXO DIREITA.
 - Certifique-se de manter o caps lock desativado.
-- Caso a bola acerte a parede, ela será ricocheteada e voltará a quantidade de casas de acordo com a força jogada (-1 do impacto).
+- Caso a bola acerte a parede, ela será ricocheteada e voltará a quantidade de casas de acordo com a força jogada dividido pela metade
 
 ## ♟️ Executando o Jogo
 
