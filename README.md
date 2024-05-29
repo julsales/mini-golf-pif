@@ -1,9 +1,10 @@
 # ⛳ Mini Golf
 <br>
+Ps: Os commits foram feitos na branch Master antes de serem passados para a Main deviado a um conflito no CLion
 
 ## 📄 Descrição
 
-Mini Golf é um jogo baseado no esporte da vida real, ondo jogadores competem entre su para acertarem o buraco apenas movendo a bola e desviando dos possíveis obstáculos, isso com o menor número de movimentos possíveis.
+Mini Golf é um jogo baseado no esporte da vida real, ondo jogadores competem entre si para acertarem o buraco apenas movendo a bola, isso com o menor número de movimentos possíveis.
 
 ## 🎲 Objetivo do Jogo
 
